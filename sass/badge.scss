@@ -1,0 +1,54 @@
+//
+// Badges.css
+// --------------------------------------------------
+
+// Color variables for badges
+$badge-default-bg: #aeb0b3;
+$badge-default-color: #fff;
+$badge-active-color: #737475;
+$badge-active-bg: #fff;
+$badge-primary: #116cd6;
+$badge-positive: #5bd46d;
+$badge-negative: #fc605b;
+
+.badge {
+  display: inline-block;
+  min-width: 10px;
+  padding: 2px 7px;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 1;
+  color: $badge-default-color;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-color: $badge-default-bg;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-top: 4px;
+
+  // Active state in specific components
+  .nav-group-item.active &,
+  .list-group-item.active & {
+    color: $badge-active-color;
+    background-color: $badge-active-bg;
+  }
+
+  // Modifiers
+  &-primary {
+    background-color: $badge-primary;
+  }
+
+  &-positive {
+    background-color: $badge-positive;
+  }
+
+  &-negative {
+    background-color: $badge-negative;
+  }
+
+  // Optional: Add more states
+  &:empty {
+    display: none;
+  }
+}
